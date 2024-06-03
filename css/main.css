@@ -1,0 +1,446 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+*{
+    font-family: system-ui;
+}
+.tit{
+    padding-left: 30px;
+}
+
+
+
+/* استایل های کلی  */
+body {
+    direction: rtl;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  .btn {
+    background-color: green;
+    padding: 0.5rem 3rem;
+    border-radius: 50px;
+    transition: all ease-in-out 0.5s;
+    color: white;
+  }
+  .btn:hover {
+    background-color: white;
+    padding: 0.5rem 3rem;
+    border-radius: 50px;
+    color: green;
+  }
+  /* استایل های کلی */
+  
+  /* هدر سایت */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 0 4rem; */
+    position: fixed;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    top: 0;
+    width: 100%;
+    background-color: #222222b8;
+    color: white;
+    box-shadow: #222222b8 0px 0px 10px 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .titbox{
+    width:  100%;
+    display: flex;
+    justify-content: center;
+  }
+  .menu-berger {
+    display: none;
+    margin: 0 4rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+  }
+  .menu {
+    display: flex;
+  }
+  .menu li{
+    color: white;
+  }
+  .logobox{
+    padding-right: 10px;
+  }
+  .phonebox{
+    padding-left: 10px;
+  }
+  .menu-items {
+    list-style: none;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    position: relative;
+  }
+  .menu-items::after {
+    bottom: 0;
+    left: 0;
+    content: "";
+    position: absolute;
+    width: 0%;
+    transition: all 0.3s;
+    height: 4px;
+    background-color: green;
+  }
+  .menu-items:hover::after {
+    width: 100%;
+  }
+  .phone-number {
+    font-size: 1.1rem;
+  }
+  .menu-berger-item {
+    height: 100%;
+    background-color: green;
+    position: fixed;
+    right: 0;
+    top: 0;
+    direction: ltr;
+  }
+  .menu-berger-item-link {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+  }
+  .menu-berger-item-link li {
+    color: white;
+    padding: 1.5rem;
+    border-bottom: 1px white solid;
+  }
+  
+  /* هدرسایت */
+  /* صفحه اصلی */
+  .main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("../img/lotus/foter/12_assda.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .main-items {
+    margin-bottom: 2rem;
+    padding-right: 30px;
+    color: whitesmoke;
+  }
+  .main-items h1 {
+    font-size: 3rem;
+  }
+  .main-items p {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+  .main-items a {
+    color: white;
+    font-size: 1.2rem;
+  }
+  .fillbox{
+    width: 100%;
+    height: 200vh;
+    /* background-image: url("../img/lotus/foter/19_dhans11.jpg"); */
+    background-color: whitesmoke;
+    background-position: center;
+    background-size: cover;
+  }
+.fillcart{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+    
+}
+.fillcart .fcart{
+    width: 500px;
+    height: 631px;
+    box-shadow: inset gray 0px 0px 10px 0px;
+    background-color: white;
+    border-radius: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: rotate3d(0.5, 2, 0, 45deg);
+    transition-duration: 0.3s;
+
+    
+}
+.fillcart .tech{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.fillcart .tech .technav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    box-shadow: gray 0px 0px 5px 0px;
+    width: 100%;
+    height: 60px;
+    transition-duration: 0.3s;
+    opacity: 0;
+}
+.fillcart:hover .fcart{
+    transform: rotate3d(0.5, 2, 0, 0);
+    background: linear-gradient(16deg, red, #ff0092);
+
+}
+.fillbox .fcart .tech .technav .logotech{
+    width: 50px;
+    height: 50px;
+    /* border-radius: 100%; */
+}
+.fillbox .fcart .tech .technav .logotech img{
+    width: 90%;
+    height: 90%;
+}
+.fillcart:hover .fcart .tech .technav {
+    opacity: 1;
+}
+.fillcart:hover .fcart .tech .techhead h3{
+    opacity: 1;
+} 
+
+.fillcart .fcart .tech .techhead h3{
+    opacity: 0;
+    color: white;
+
+}
+
+.morebtn a{
+    text-decoration: none;
+    color: white;
+}
+.morebtn {
+    width: 120px;
+    height: 50px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: white 0px 0px 0px 5px;
+    margin-top: 10px;
+    transition-duration: 0.3s;
+    background: linear-gradient(16deg, red, #ff0092);
+    opacity: 0;
+}
+.morebtn:hover{
+    background: linear-gradient(16deg, #ff0092 , red);
+}
+.fillcart:hover .fcart .tech .morebtn{
+    opacity: 1;
+}
+
+
+#game{
+    background-color: white;
+}
+.fillcart:hover #game{
+    background: linear-gradient(16deg, rgb(68, 0, 255), #ff00e6);
+
+}
+#game .tech .morebtn{
+    background: linear-gradient(16deg, rgb(68, 0, 255), #ff00e6);
+
+}
+.header{
+    display: flex;
+}
+
+.phonehead{
+    display: none;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    padding: 10px;
+    background-color: #222222b8;
+    backdrop-filter: blur(20px);
+}
+
+.phonehead .opener{
+    width: 50%;
+}
+.phonehead .logo{
+    width: 50%;
+}
+.phonehead .glass{
+    position: fixed;
+}
+.phonehead .menu{
+    position: fixed;
+}
+.phonehead .opener svg {
+    width: 50px;
+    height: 50px;
+    color: white;
+}
+.phonehead .menu {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 70vw;
+    background:white;
+    top: 0;
+    left: 0;
+    right: -100%;
+    bottom: 0;
+    height: 100vh;
+    box-shadow: gray 0px 0px 10px 0px;
+    transition-duration: 0.5s;
+}
+.phonehead .menu .item {
+    padding: 10px;
+}
+.glass{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 99;
+    backdrop-filter: blur(10px);
+    visibility: hidden;
+    opacity: 0;
+}
+.phonehead .menu .item a{
+    font-size: 25px;
+}
+
+.closebtn{
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    width: 50px;
+    height: 50px;
+}
+.closebtn svg{
+    width: 60%;
+    height: 60%;
+}
+
+
+.container {
+    display: flex;
+    direction: rtl;
+}
+.footer{
+    justify-content: space-between;
+    background-color: rgb(66, 66, 66);
+    color: white;
+    padding:10%;
+}
+/* استایل های مربوط به سمت راست فوتر */
+.left_footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.address{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.address p {
+    text-align: center;
+    line-height: 25px;
+}
+.multi_media a{
+    text-decoration: none;
+}
+.multi_media a svg{
+    color: rgb(255, 255, 255);
+    margin:0 5px;
+}
+/* استایل های مربوط به سمت چپ فوتر */
+
+.ritgh_footer{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+}
+.ritgh_footer p{
+    line-height: 25px;
+}
+
+
+@media screen and (max-width:700px){
+    .container{
+        display:inline-block;
+    }
+}
+
+
+
+@media (max-width:700px){
+    .fillcart .fcart{
+        width: 300px;
+        height: 431px;
+        box-shadow: inset gray 0px 0px 10px 0px;
+        background-color: white;
+        border-radius: 40px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transform: rotate3d(0.5, 2, 0, 45deg);
+        transition-duration: 0.3s;
+    
+        
+    }
+    .phonehead{
+        display: flex;
+    }
+    .header{
+        display: none;
+    }
+}
+
+
+  /* صفحه اصلی */
+  
+
+
+/* 
+.test{
+    width: 100px;
+    height: 60px;
+    background-color: black;
+    transition-duration: 0.3s;
+    position: relative;
+}
+.test::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    transition-duration: 0.3s;
+    height: 100%;
+    background-color: white;
+
+}
+.test:hover::after{
+    width: 100%;
+} */
